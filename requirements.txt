@@ -1,0 +1,8 @@
+onnxruntime
+numpy
+pandas
+flask
+pillow
+ollama
+huggingface-hub
+python-dotenv
