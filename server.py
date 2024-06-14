@@ -9,7 +9,8 @@ from ollama import generate
 
 load_dotenv()
 
-# Ensure hf_token is defined
+# Assuming 'llama:34b-v1.6-q4_K_M' is the intended model; adjust as necessary
+ollama_model = 'llava:34b-v1.6-q4_K_M'
 
 hf_token = os.getenv('HF_TOKEN')
 
@@ -69,7 +70,7 @@ def llava_caption_prompt():
         image.save(buffered, format="JPEG")    
         image_bytes = buffered.getvalue()
         # Assume 'llama:13b-v1.6' is the intended model; adjust as necessary
-        responses = generate(model='llava:34b-v1.6-q4_K_M',
+        responses = generate(model=ollama_model,
                             prompt=f'{prompt}',
                             images=[image_bytes], 
                             stream=False)  # Using stream=False for a single response
