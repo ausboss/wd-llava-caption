@@ -1,8 +1,8 @@
-onnxruntime
+onnxruntime==1.18.0
 numpy==1.26.4
-pandas
-flask
-pillow
-ollama
-huggingface-hub
-python-dotenv
+pandas==2.2.2
+Flask==3.0.3
+pillow==10.3.0
+ollama==0.2.1
+huggingface-hub==0.23.3
+python-dotenv==1.0.1
